@@ -1,0 +1,27 @@
+.intro {
+	padding-top: $section_padding;
+	
+	&__article {
+		opacity: 1;
+		transform: translateY(0);
+		transition: opacity 1s, transform 1s;
+		margin-bottom: 50px;
+	}
+
+	&__text-wrapper {
+		border-left: 3px solid #777;
+	}
+
+	&__text {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 0;
+		margin-bottom: 1em;
+		
+
+		&_indented {
+			text-indent: 1em;
+		}
+	}
+}
+

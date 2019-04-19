@@ -1,0 +1,147 @@
+.products {
+	padding-top: $section_padding;
+	overflow: hidden;
+
+	&__content {
+		
+	}
+
+	&__cell {		
+		
+	}
+
+	&__unit {
+		transition: transform .6s;
+		height: 320px;
+		margin-bottom: 30px;
+		flex: 1 1 auto;
+		overflow: hidden;
+		border-radius: 10px;
+		position: relative;
+		box-shadow: 0px 3px 8px #c7c7c7;
+
+		&_leader:before {
+			transform: rotate(-45deg) translate(-6.5em, -3em);
+			content: "Хит продаж";
+			position: absolute;
+			width: 20em;
+			height: 1.5em;
+			color: #dc1b1b;
+			top: 0;
+			left: 0;
+			font-size: 1.2em;
+			line-height: 1.5em;
+			font-weight: bold;
+			background-color: #ffff38;
+			z-index: 5;
+			text-align: center;
+		}		
+
+		&:hover {
+			.products__overlay-1 {
+				opacity: 0;
+			}
+		}
+		
+	}
+
+	&__img {
+		height: 320px;
+	}
+
+	&__img, &__overlay-1 {
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	&__img_first {
+		background-image: url(../img/gal_1.png);
+	}
+
+	&__img_second {
+		background-image: url(../img/gal_2.png);
+	}
+
+	&__img_third {
+		background-image: url(../img/gal_3.png);
+	}
+
+	&__img_fourth {
+		background-image: url(../img/gal_4.png);
+	}
+
+	&__overlay-1_first {
+		background-image: url(../img/gal_1_blur.png);
+	}
+
+	&__overlay-1_second {
+		background-image: url(../img/gal_2_blur.png);
+	}
+
+	&__overlay-1_third {
+		background-image: url(../img/gal_3_blur.png);
+	}
+
+	&__overlay-1_fourth {
+		background-image: url(../img/gal_4_blur.png);
+	}
+
+	&__overlay-1 {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: 10px;
+		opacity: 0.8;
+		transition: opacity .8s;
+	}
+
+	&__info {
+		top: 0;
+		position: absolute;
+		bottom: 0;
+		color: #fff;
+		width: 100%;
+		background-color: rgba(16, 116, 146, 0.5);
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__price {
+		font-size: 3em;
+		align-self: flex-end;
+
+	}
+
+	&__ingredients-list {
+		font-size: 1.2em;
+		list-style: circle;
+	}
+
+	&__ingredient {
+
+	}
+
+	&__order-button {
+		padding: 1.3em 1.7em;
+		border-radius: 10px;
+		letter-spacing: 2px;
+		border: none;
+		background-color: rgba(0, 0, 0, .5);
+		font-size: .8em;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #fff;
+		cursor: pointer;
+		transition: background-color .3s;
+
+		&:hover {
+			background-color: #00a292;
+		}
+	}
+}

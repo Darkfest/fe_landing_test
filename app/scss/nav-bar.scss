@@ -1,0 +1,214 @@
+.menu {
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background-color: #fff;
+	box-shadow: 0 3px 10px #d3d3d3;
+	display: flex;
+	transition: background-color .3s, box-shadow .3s;
+
+	&__row {
+		padding: 0 15px;
+
+		@media (max-width: 767.98px) {
+			justify-content: space-between;
+		}
+	}
+
+	&_transparent {
+		box-shadow:  0 0 0 transparent;
+		background-color: transparent;
+	}
+
+	&_hidden {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&__instagram-img {
+		height: 40px;
+		width: 40px;
+	}
+
+	&__list {
+		flex: 1 1 auto;
+		height: 60px;
+		display: flex;
+		justify-content: space-around;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		align-items: center;
+		opacity: 1;
+		visibility: visible;
+		transition: opacity 1s, visibility 1s, width .5s;
+
+		@media (max-width: 767.98px) {
+			overflow: hidden;
+			height: calc(100vh - 60px);						
+			background-color: #efefeff7;
+			width: 100%;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			top: 60px;
+			left: 0;
+			transition: height .5s;
+
+			.menu__item {
+				margin-bottom: 30px;
+				font-size: 1.5em;
+			}
+				
+
+			&_hide-fix {
+				visibility: hidden;
+			}
+
+			&_hidden {
+				height: 0;
+			}
+		}
+	
+		
+	}
+
+	&__list:not(.menu__list_hidden) + .menu__toggle-button .toggle-button__line:first-child {
+		transform: translateY(7px) rotate(45deg);
+	}
+
+	&__list:not(.menu__list_hidden) + .menu__toggle-button .toggle-button__line:nth-child(2) {
+		transform: rotateY(180deg) rotateZ(45deg);
+		width: 40px;
+	}
+
+	&__list:not(.menu__list_hidden) + .menu__toggle-button .toggle-button__line:last-child {
+		width: 0;
+	}
+
+	&__item {
+		flex: 0 0 auto;
+		position: relative;
+
+		&:last-child {
+			margin-right: -16px;			
+
+			@media  (max-width: 767.98px) {
+				margin-right: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__pointer {
+		position: absolute;
+		width: 70px;
+		height: 40px;
+		bottom: 0;
+		left: 50%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		background-image: url(../img/menu_down_arrow.png);
+		
+		opacity: 0;
+		transform: translateY(50%) translateX(-50%) scaleY(0);
+		transition: opacity .6s, transform .6s;
+		
+	}
+
+	&__link {
+		padding: 2px 10px;
+		color: inherit;
+		font-size: 16px;
+		font-weight: bold;
+		cursor: pointer;
+		display: block;
+		text-transform: uppercase;
+		position: relative;
+		z-index: 1;
+		text-decoration: none;
+		transition: color .8s;
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			width: 0;
+			background-color: crimson;
+			transition: width .5s;
+		}
+
+		&:hover {
+			color: gray;
+			text-decoration: none;
+		}
+
+		&:hover:after {
+			width: 100%;
+		}
+
+
+	}
+
+	&__logo {
+		flex: 0 0 80px;
+		height: 60px;
+		text-align: center;
+		z-index: 1;
+		position: relative;
+		cursor: pointer;
+
+		.logo__image {
+			height: 60px;
+			padding: 6px;
+		}
+	}
+
+	&__toggle-button {
+
+		@media (min-width: 768px) {
+			display: none !important;
+		}
+	}
+
+}
+
+.toggle-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	align-items: center;
+	height: 60px;
+	width: 80px;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+
+	&__line {
+		display: block;
+		height: 3px;
+		background-color: #222222;
+		width: 50px;
+		margin-top: 2px;
+		margin-bottom: 2px;
+		transition: width .5s, transform .5s;
+
+		&:first-child {
+			width: 40px;
+		}
+
+		&:last-child {
+			width: 20px;
+		}
+	}
+}

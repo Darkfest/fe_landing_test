@@ -1,0 +1,104 @@
+.process {
+	padding-top: $section_padding;
+
+	&__article {
+		margin-bottom: 50px;
+	}
+
+	&__text {
+		border-left: 3px solid #777;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	&__left {
+		flex: 1 1 300px;
+	}
+
+	&__right {
+		flex: 1 1 300px;
+	}
+
+}
+
+.step {
+	border-radius: 10px;
+	margin-bottom: 40px;
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 1s, transform 1s;
+
+	&__number {
+		position: absolute;
+		top: 0;
+		left: 10px;
+		color: #dedede;
+		font-size: 10rem;
+		transform: translateY(-50%);
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 1.2em;
+		text-align: center;
+		margin: 1em 0 1em 0;
+		position: relative;
+		z-index: 1;
+
+		
+	}
+
+	&__content {
+		position: relative;
+		border-radius: 10px;
+		background-color: #fff;
+		box-shadow: 0px 3px 8px #c7c7c7;
+	}
+
+	&__text {
+		padding: 20px 15px;
+		position: relative;
+		margin: 0;
+
+		&_indented {
+			text-indent: 1em;
+		}
+	}
+
+	&__img {
+		position: relative;
+		height: 250px;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: cover;
+		background-position: center center;
+		border-radius: 0 0 10px 10px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 40px;
+			background: linear-gradient(180deg, #fff 0%, transparent 100%);
+		}
+
+	}
+
+	&__img_partners {
+		background-image: url(../img/products1.jpg);
+	}
+
+	&__img_wokers {
+		background-image: url(../img/cook1.jpg);
+	}
+
+	&__img_delivery {
+		background-image: url(../img/drone1.jpg);
+	}
+
+	&__img_client {
+		background-image: url(../img/client1.jpg);
+	}
+}

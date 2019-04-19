@@ -1,0 +1,97 @@
+@font-face {
+	font-family: "Exo_2";
+	src: url("../font/Exo2ExtraLight.ttf");
+}
+
+@font-face {
+	font-family: "MarckScript-Regular";
+	src: url("../font/MarckScript-Regular.ttf");
+}
+
+$base_color: #fdfdfd;
+$second_color: #f3f3f3;
+$section_padding: 60px;
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font: 16px calibri, verdana, sans-serif;
+	background-color: $base_color;
+	color: #505050;
+}
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+button:focus {
+	outline: none;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.w100 {
+	width: 100%;
+}
+
+.title {
+	font-size: 36px;
+	margin-left: 60px;
+	margin-bottom: 80px;
+	font-family: fantasy;
+	position: relative;
+	display: inline-block;
+
+	&:before {
+		content: "";
+		width: 4000px;
+		height: 3px;
+		background-color: #eaeaea;
+		position: absolute;
+		bottom: -3px;
+		right: 0;
+	}
+
+	@media (max-width: 767.98px) {
+		margin-left: 0;
+		display: block;
+		text-align: center;
+
+		&:before {
+			width: 100%;
+		}
+	}
+}
+
+
+.first-letter-big:first-letter {
+	color: #8c0202;
+	float: left;
+	font-size: 4.5em;
+	line-height: 0.7em;
+	margin: .04em 0.07em 0 -0.1em;
+	letter-spacing: 0px;
+}
+
+@import "nav-bar.scss";
+@import "header.scss";
+@import "intro.scss";
+@import "feedback.scss";
+@import "features.scss";
+@import "products.scss";
+@import "orders.scss";
+@import "process.scss";
+@import "questions.scss";
+@import "footer.scss";
+
+
+
+.hidden {
+	opacity: 0;
+	transform: translateY(80px);
+	transition: opacity 0s, transform 0s;
+}
